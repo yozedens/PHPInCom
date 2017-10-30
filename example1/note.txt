@@ -1,0 +1,35 @@
+1、数据库设计
+数据库： yzd
+
+用户信息表： users
+
+字段及格式：
+字段名		含义 		一般存储规则			格式要求
+
+id		用户ID		主键、非空、自增		暂无 
+name		用户名		非空、唯一				英文字符、数字、下划线组成；非数字开头；3-16位 
+pwd		密码		非空				英文字母、数字、半角特殊字符（`~!@#$%^&*()[]{}-_+=,<>./?\|）组成；必须包含字母、数字各一；6-16位
+sex		性别		非空				m/f表示男/女
+idcard		证件号		非空、唯一				18位数字
+img		头像		有default值			存储图片路径，显示时显示图片
+email		邮箱地址	无				英文字符、数字、下划线、@组成；必须为***@***格式
+addr		联系地址	无				支持汉字			
+category	用户类别	非空、有default值		数字表示类别；之后可考虑外接用户类别表
+
+img默认值：img//001.jpg
+category默认值：10
+category用户类别说明：0超级管理员、1管理员、10重要用户、11一般用户、12标黑用户
+
+
+CREATE TABLE users(
+    id int PRIMARY KEY not null AUTO_INCREMENT,
+    name varchar(16) not null,
+    pwd varchar(16) not null,
+    sex char(1) not null,
+    idcard char(18) not null,
+    img varchar(100)  DEFAULT 'img//001.jpg',
+    email varchar(50),
+    addr varchar(100),
+    category varchar(2) not null DEFAULT '10');
+    
+
