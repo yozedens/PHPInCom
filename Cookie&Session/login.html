@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>login</title>
+    <style>
+    form label{
+        display: inline-block;
+        width:70px;
+    }
+    #submit{
+        margin-left: 100px;
+    }
+    </style>
+    <script language="javascript">
+        function check() {
+            if(document.getElementById("username").value==""){
+                alert("请输入用户名");
+                document.getElementById("username").focus();//获得焦点
+                return false;//返回false终止跳转
+            }else if(document.getElementById("pwd").value==""){
+                alert("请输入密码");
+                document.getElementById("pwd").focus();
+                return false;
+            }
+        }
+    </script>
+</head>
+<body>
+    
+    <form action="default.php" method="post">
+        <label for="username">用户名：</label>
+        <input type="text" name="username" id="username"><br>
+        <label for="pwd">密码：</label>
+        <input type="password" name="pwd" id="pwd"><br>
+        <input type="submit" name="submit" id="submit" value="登录" onclick="return check();">
+    </form>
+</body>
+</html>
