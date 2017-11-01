@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script language="javascript">
+        function check(){
+            var curYear = form1.year.value;
+            if((curYear%4==0&&curYear%100!=0)||curYear%400==0){//能被4整除但不能被100整除，或能被400整除的年份即为闰年
+                alert(curYear+"年是闰年！");
+            }
+            else{
+                alert(curYear+"年是平年！");
+            }
+        }
+        
+        var i=3;
+    </script>
+</head>
+<script language="javascript">
+        //i=1;
+        do {
+            document.write(i+"*"+i+"="+i*i+"&nbsp;&nbsp;");
+            i++;
+        } while (i<=13); 
+    </script>
+<body>
+    <script src="basic.js"></script>
+    <form name="form1" action="" method="post">
+        <label for="select">检测闰年：</label>
+        <select name="year" id="select">
+            <option value="2000">2000年</option>
+            <option value="2001">2001年</option>
+            <option value="2002">2002年</option>
+            <option value="2003">2003年</option>
+            <option value="2004">2004年</option>
+            <option value="2005">2005年</option>
+            <option value="2006">2006年</option>
+            <option value="2007">2007年</option>
+            <option value="2008">2008年</option>
+        </select>
+        <input type="submit" name="submit" value="检测" onclick="check();">
+    </form>
+    <script type="text/javascript">
+        document.write("&ltscript&gt&lt\/script&gt");
+    </script>
+    <noscript>
+        您的浏览器不支持js脚本！;
+    </noscript>
+</body>
+</html>

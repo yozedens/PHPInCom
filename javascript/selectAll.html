@@ -1,0 +1,48 @@
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <script>
+        function selectAll() {
+            var checklist = document.getElementsByName("selected");
+            if (document.getElementById("select").checked) {
+                for (var i = 0; i < checklist.length; i++) {
+                    checklist[i].checked = true;
+                }
+            }
+            else {
+                for (var i = 0; i < checklist.length; i++) {
+                    checklist[i].checked = false;
+                }
+            }
+        }
+        function switchAll() {
+            //static var switchFlag = false;
+            var checklist = document.getElementsByName("selected");
+            ///if (document.getElementById("switch").checked) {
+                for (var i = 0; i < checklist.length; i++) {
+                    if(checklist[i].checked){
+                        checklist[i].checked=false;
+                    }else{
+                        checklist[i].checked = true;
+                    }
+                }
+            //}
+        }
+        switchAll();
+    </script>
+        </head>
+        <body>
+        <form>
+        
+        1:<input type="checkbox" name="selected" value="1"/><br>
+        2:<input type="checkbox" name="selected" value="2"/><br>
+        3:<input type="checkbox" name="selected" value="3"/><br>
+        4:<input type="checkbox" name="selected" value="4"/><br>
+        5:<input type="checkbox" name="selected" value="5"/><br>
+        6:<input type="checkbox" name="selected" value="6"/><br>
+        <input type="checkbox" name="" id="select" onclick="selectAll();">全选<br>
+        <input type="checkbox" name="" id="switch" onclick="switchAll();">反选<br>
+        </form>
+        </body>
+        </html>

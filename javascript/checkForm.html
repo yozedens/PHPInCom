@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        form label{
+            display:inline-block;
+            width:70px;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script language="javascript">
+        function checkRegUsername(username) {
+            var name = username;
+            var reg = /^[_a-zA-Z]\w{5,15}$/;
+            var objExp = new RegExp(reg);
+            if(objExp.test(name)){
+                return true;
+            }else{
+                return false;
+            }
+        }
+        function checkUsername() {
+            //document.write("调用了函数！");
+            if(form1.username.value ==""){
+                alert("用户名称不能为空！");
+                form1.username.focus();
+                return false;
+            }else if(!checkRegUsername(form1.username.value)){
+                alert("用户名格式错误！\n用户名应该为6-16位字母数字下划线组合，且不能以数字开头！");
+                form1.username.focus();
+                return false;
+            } 
+
+        }
+        function showTip() {
+            tipsArea.innerHTML='<font color="red" size="1px">6-16位字母数字下划线组合，且不能以数字开头！</font>';
+        }
+        function hiddenTip() {
+            tipsArea.innerHTML="";
+        }
+    </script>
+</head>
+<body>
+    
+    <form name="form1" action="" method="post">
+        <label for="username">用户名：</label>
+        <input type="text" name="username" id="username" onchange="return checkUsername();">
+        <img width="10px" height="10px" src="logo.jpg" alt="." onMouseOver="showTip();" onMouseOut="hiddenTip();"><span id="tipsArea"></span><br>
+        <label for="pwd">密码：</label>
+        <input type="password" name="pwd" id="pwd"><br>
+        <br>
+        <input type="submit" name="submit"  onClick="" value="登录">
+        <input type="reset" value="重置"><br>
+    </form>
+</body>
+</html>
