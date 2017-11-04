@@ -5,6 +5,9 @@
     <title>target page</title>
 </head>
 <body>
-    target page
+    target page<br>
+    <?php
+        echo $_GET["name"];
+    ?>
 </body>
 </html>

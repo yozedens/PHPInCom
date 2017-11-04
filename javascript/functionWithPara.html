@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script language="javascript">
+        function func(name) {
+            switch (name) {
+                case "a":
+                    alert("参数是a");
+                    break;
+                case "b":
+                    alert("参数是b");
+                default:
+                    alert("参数是其他");
+                    break;
+            }
+        }
+        //func("abcd");
+    </script>
+</head>
+<body>
+    <button onclick="func('b');">点击调用函数</button>
+</body>
+</html>

@@ -16,7 +16,8 @@
     
         if(isset($_POST["submit"])){
             echo "输出测试";//理论上会报错，但实测时没有发生？
-            header('location: target.php');
+            $name = "yzd";
+            header("location: target.php?name=$name");
         }
             
     ?>
