@@ -1,10 +1,16 @@
+<?php
+    session_start();
+    echo '$_SESSION["id"] = '.$_SESSION["id"];
+
+?>
+
 <html>
     <head>
     </head>
     <body>
         <?php
             //date_default_timezone_set('PRC');//当没有在php.ini中设置默认时区的话，此函数可以临时设置
-            echo date('h:i:s d-m-y').'<br>';
+/*             echo date('h:i:s d-m-y').'<br>';
             echo "mktime函数返回的时间戳:".mktime().'<br>';
             echo "当前时间：".date('h:i:s d-m-y',mktime()).'<br>';
             echo "time函数输出:".time().'<br>';
@@ -30,7 +36,7 @@
                 $sum += $i;
             }echo $sum."<br>";
             $end_time = run_time();
-            echo "测试代码运行时间为：".($end_time-$start_time);
+            echo "测试代码运行时间为：".($end_time-$start_time); */
         ?>
     </body>
 </html>
