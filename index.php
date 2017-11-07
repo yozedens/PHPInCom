@@ -1,6 +1,11 @@
 <?php
     session_start();
-    echo '$_SESSION["id"] = '.$_SESSION["id"];
+    if(isset($_SESSION["id"])){
+        echo '$_SESSION["id"] = '.$_SESSION["id"];
+    }else{
+        echo 'no $_SESSION["id"]';
+    }
+    
 
 ?>
 

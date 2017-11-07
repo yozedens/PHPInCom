@@ -6,7 +6,7 @@ function showImg() {
 function showTip(name) {
     switch (name) {
         case "img":
-            imgTipsArea.innerHTML = '<font color="red" size="1px">选择已有头像，之后再用户设置中可修改</font>'
+            imgTipsArea.innerHTML = '<font color="red" size="1px">选择已有头像，之后在用户设置中可修改</font>'
             break;
         case "registername":
             registernameTipsArea.innerHTML = '<font color="red" size="1px">3-16位字母数字下划线组合，且不能以数字开头</font>';

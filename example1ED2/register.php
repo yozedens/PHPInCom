@@ -23,7 +23,7 @@
             $conn = new mysqli($DBHOST,$DBUSER,$DBPWD,$DBNAME);
             if(!$conn){//数据库连接失败
                 echo "服务数据库连接失败，请重试或联系管理员。";
-                header('Refresh:2; url=index.php');
+                header('Refresh:2; url=register.php');
                 die;
             }else{
                 echo "数据库连接成功";
